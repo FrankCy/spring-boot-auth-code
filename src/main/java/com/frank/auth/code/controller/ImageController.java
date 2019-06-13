@@ -6,6 +6,7 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -30,6 +31,14 @@ import java.time.ZoneId;
 public class ImageController {
 
     private static final Log logger = LogFactory.getLog(ImageController.class);
+
+    @RequestMapping(value = "/index")
+    public ModelAndView login() {
+        //初始化响应模版
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("auth_code");
+        return modelAndView;
+    }
 
     /**
      * 获取验证码图片

@@ -14,8 +14,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @mofified By:
  */
 @SpringBootApplication
-public class AuthCcodeApplication {
+public class AuthCodeApplication {
     public static void main(String[] args) {
-        SpringApplication.run(AuthCcodeApplication.class, args);
+        SpringApplication.run(AuthCodeApplication.class, args);
     }
 }
